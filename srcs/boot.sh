@@ -4,12 +4,22 @@ apt-get install -y nginx
 apt-get -y install mariadb-server
 apt-get -y install wget
 apt-get -y install php php-fpm php-mysql php-common php-cli php-common php-json php-opcache php-readline
+apt-get install -y libnss3-tools
 
-
-
+#NGINX SETUP
+cd
 mkdir -p /var/www/localhost
 cp /localhost-conf /etc/nginx/sites-available/localhost
 ln -fs /etc/nginx/sites-available/localhost /etc/nginx/sites-enabled/default
+
+#SLL SETUP
+mkdir ~/mkcert && \
+  cd ~/mkcert && \
+  wget https://github.com/FiloSottile/mkcert/releases/download/v1.1.2/mkcert-v1.1.2-linux-amd64 && \
+  mv mkcert-v1.1.2-linux-amd64 mkcert && \
+  chmod +x mkcert
+./mkcert -install
+./mkcert localhost
 
 #DATABASE SETUP
 service mysql start
