@@ -106,12 +106,12 @@ CREATE TABLE `wp_options` (
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(1, 'siteurl', 'http://localhost', 'yes'),
-(2, 'home', 'http://localhost', 'yes'),
+(1, 'siteurl', 'http://localhost/wordpress', 'yes'),
+(2, 'home', 'http://localhost/wordpress', 'yes'),
 (3, 'blogname', 'FT_SERVER 42', 'yes'),
 (4, 'blogdescription', 'Un site utilisant WordPress', 'yes'),
 (5, 'users_can_register', '0', 'yes'),
-(6, 'admin_email', 'mle-floc@student.42.fr', 'yes'),
+(6, 'admin_email', 'cjaimes@student.42.fr', 'yes'),
 (7, 'start_of_week', '1', 'yes'),
 (8, 'use_balanceTags', '0', 'yes'),
 (9, 'use_smilies', '1', 'yes'),
@@ -445,7 +445,7 @@ CREATE TABLE `wp_users` (
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
-(1, 'root', '$P$BS9I00Fsw1mRe17Ls1Kd5EMBKb6YDo.', 'root', 'mle-floc@student.42.fr', '', '2019-11-09 21:17:18', '', 0, 'root');
+(1, 'root', '$P$BS9I00Fsw1mRe17Ls1Kd5EMBKb6YDo.', 'root', 'cjaimes@student.42.fr', '', '2019-11-09 21:17:18', '', 0, 'root');
 
 --
 -- Indexes for dumped tables

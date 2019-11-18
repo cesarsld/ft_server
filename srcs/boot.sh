@@ -32,12 +32,12 @@ mysql wordpress -u root --password=  < /wordpress.sql
 
 #WORDPRESS INSTALL
 cd
-cp /wordpress-5.3.tar.gz /var/www/
-cd /var/www
-tar -xf wordpress-5.3.tar.gz
-rm wordpress-5.3.tar.gz
-rmdir localhost
-mv wordpress localhost
+cp /wordpress.tar.gz /var/www/localhost
+cd /var/www/localhost
+tar -xf wordpress.tar.gz
+rm wordpress.tar.gz
+#rmdir localhost
+#mv wordpress localhost
 
 #PHPMYADMIN INSTALL
 cd
